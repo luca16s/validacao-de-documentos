@@ -131,7 +131,7 @@ namespace CpfValidation
             estados.Add("São Paulo");
             estados.Add("Paraná e Santa Catarina");
 
-            return "";
+            return estados[Convert.ToInt32(SeparaNumeros(_cpf, 9))];
         }
     }
 }
