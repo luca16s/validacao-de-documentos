@@ -8,6 +8,7 @@ namespace CpfTest
         static void Main(string[] args)
         {
             string cpf;
+            Console.WriteLine("Insira seu CPF: ");
             cpf = Console.ReadLine();
             if (CpfValidationClass.Validacao(cpf) == false)
             {
@@ -16,6 +17,7 @@ namespace CpfTest
             else
             {
                 Console.WriteLine("CPF Valido!");
+                Console.WriteLine(CpfValidationClass.EstadoCpf(cpf));
             }
             Console.ReadLine();
         }
