@@ -110,7 +110,7 @@ namespace CpfValidation
                                             + (Convert.ToDouble(SeparaNumeros(_cpf, 9)) * 3)
                                                 + (Convert.ToDouble(SeparaNumeros(_cpf, 10)) * 2));
             double resultB = (resultA * 10) % 11;
-            if (resultB == Convert.ToDouble(SeparaNumeros(_cpf, 11)))
+            if (resultB == Convert.ToDouble(SeparaNumeros(_cpf, 11)) || resultB == 10)
             {
                 return true;
             }
