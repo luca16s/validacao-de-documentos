@@ -63,6 +63,41 @@ namespace CpfValidation
                             {
                                 return true;
                             }
+                            else
+                            {
+                                if (_cpf.Equals(CpfFalsos.GetValue(5)))
+                                {
+                                    return true;
+                                }
+                                else
+                                {
+                                    if (_cpf.Equals(CpfFalsos.GetValue(6)))
+                                    {
+                                        return true;
+                                    }
+                                    else
+                                    {
+                                        if (_cpf.Equals(CpfFalsos.GetValue(7)))
+                                        {
+                                            return true;
+                                        }
+                                        else
+                                        {
+                                            if (_cpf.Equals(CpfFalsos.GetValue(8)))
+                                            {
+                                                return true;
+                                            }
+                                            else
+                                            {
+                                                if (_cpf.Equals(CpfFalsos.GetValue(9)))
+                                                {
+                                                    return true;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
