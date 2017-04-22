@@ -9,5 +9,5 @@ matrix:
       env: DOTNETCORE=1  # optional, can be used to take different code paths in your script
     - mono: latest
 script:
-  - dotnet restore
-  - dotnet run
+  - xbuild /p:Configuration=Release CpfValidation.sln
+  - dotnet run ./luca16s/CpfValidation/CpfTest/Program.cs
