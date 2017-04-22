@@ -1,2 +1,8 @@
 language: csharp
 solution: CpfValidation.sln
+script: 
+- ./build.sh
+- ./test.sh
+install:
+  - sudo apt-get install -y gtk-sharp2
+  - nuget restore CpfValidation.sln
