@@ -1,13 +1,9 @@
 language: csharp
-solution: CpfValidation.sln
+solution: ./src/CpfValidation.sln
 
-matrix:
-  include:
-    - dotnet: 1.0.1
-      mono: none
-      dist: trusty
-      env: DOTNETCORE=1  # optional, can be used to take different code paths in your script
-    - mono: latest
+install:
+  - sudo apt-get install nunit-console
+  - nuget restore ./src/CpfValidation.sln
+
 script:
-  - xbuild /p:Configuration=Release CpfValidation.sln
-  - dotnet run ./luca16s/CpfValidation/CpfTest/Program.cs
+  - xbuild ./src/CpfValidation.sln
