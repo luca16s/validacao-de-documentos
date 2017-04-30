@@ -4,4 +4,4 @@ sudo: required
 mono: none
 dotnet: 1.0.1
 script:
-  - ./build.sh --quiet verify
+  - sudo ./build.sh --quiet verify
