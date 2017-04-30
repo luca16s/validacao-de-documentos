@@ -1,9 +1,7 @@
 language: csharp
-solution: ./src/CpfValidation.sln
-
-install:
-  - sudo apt-get install nunit-console
-  - nuget restore ./src/CpfValidation.sln
-
+dist: trusty
+sudo: required
+mono: none
+dotnet: 1.0.1
 script:
-  - xbuild ./src/CpfValidation.sln
+  - ./build.sh --quiet verify
