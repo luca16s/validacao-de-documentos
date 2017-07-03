@@ -1,7 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
+    <Version>1.0.1</Version>
+    <Authors>Gian Luca da Silva Figueiredo</Authors>
+    <Company />
+    <Product />
+    <Description>Library to Validate CPF numbers.</Description>
   </PropertyGroup>
 
 </Project>
