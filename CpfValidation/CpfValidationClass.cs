@@ -2,11 +2,11 @@
 {
     public static class CpfValidationClass
     {
-        public static bool Validation(string cpf)
+        public static bool Validation(string _cpf)
         {
-            if (CpfFirstNumberValidator.CheckFirstValid(cpf).Equals(true) && CpfSecondNumberValidator.CheckSecondValid(cpf).Equals(true))
+            if (CpfFirstNumberValidator.CheckFirstValid(_cpf).Equals(true) && CpfSecondNumberValidator.CheckSecondValid(_cpf).Equals(true))
             {
-                if (CheckCpfFalseSequenceNumbers.CheckFalseNumberSequences(cpf).Equals(false))
+                if (CheckCpfFalseSequenceNumbers.CheckFalseNumberSequences(_cpf).Equals(false))
                 {
                     return true;
                 }

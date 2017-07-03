@@ -4,7 +4,7 @@
     {
         public static bool CheckFalseNumberSequences(string _cpf)
         {
-            string[] CpfFalsos = new string[10] {
+            string[] FalseCpf = new string[10] {
                             "00000000000",
                                 "11111111111",
                                     "22222222222",
@@ -15,61 +15,61 @@
                                                         "77777777777",
                                                             "88888888888",
                                                                 "99999999999" };
-            if (_cpf.Equals(CpfFalsos.GetValue(0)))
+            if (_cpf.Equals(FalseCpf.GetValue(0)))
             {
                 return true;
             }
             else
             {
-                if (_cpf.Equals(CpfFalsos.GetValue(1)))
+                if (_cpf.Equals(FalseCpf.GetValue(1)))
                 {
                     return true;
                 }
                 else
                 {
-                    if (_cpf.Equals(CpfFalsos.GetValue(2)))
+                    if (_cpf.Equals(FalseCpf.GetValue(2)))
                     {
                         return true;
                     }
                     else
                     {
-                        if (_cpf.Equals(CpfFalsos.GetValue(3)))
+                        if (_cpf.Equals(FalseCpf.GetValue(3)))
                         {
 
                         }
                         else
                         {
-                            if (_cpf.Equals(CpfFalsos.GetValue(4)))
+                            if (_cpf.Equals(FalseCpf.GetValue(4)))
                             {
                                 return true;
                             }
                             else
                             {
-                                if (_cpf.Equals(CpfFalsos.GetValue(5)))
+                                if (_cpf.Equals(FalseCpf.GetValue(5)))
                                 {
                                     return true;
                                 }
                                 else
                                 {
-                                    if (_cpf.Equals(CpfFalsos.GetValue(6)))
+                                    if (_cpf.Equals(FalseCpf.GetValue(6)))
                                     {
                                         return true;
                                     }
                                     else
                                     {
-                                        if (_cpf.Equals(CpfFalsos.GetValue(7)))
+                                        if (_cpf.Equals(FalseCpf.GetValue(7)))
                                         {
                                             return true;
                                         }
                                         else
                                         {
-                                            if (_cpf.Equals(CpfFalsos.GetValue(8)))
+                                            if (_cpf.Equals(FalseCpf.GetValue(8)))
                                             {
                                                 return true;
                                             }
                                             else
                                             {
-                                                if (_cpf.Equals(CpfFalsos.GetValue(9)))
+                                                if (_cpf.Equals(FalseCpf.GetValue(9)))
                                                 {
                                                     return true;
                                                 }
