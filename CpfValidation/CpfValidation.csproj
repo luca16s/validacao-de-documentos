@@ -7,6 +7,13 @@
     <Company />
     <Product />
     <Description>Library to Validate CPF numbers.</Description>
+    <RepositoryUrl>https://github.com/luca16s/Validacao-de-CPF.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/luca16s/Validacao-de-CPF/blob/master/LICENSE.MD</PackageProjectUrl>
+    <FileVersion>1.0.1.0</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>True</Optimize>
   </PropertyGroup>
 
 </Project>
