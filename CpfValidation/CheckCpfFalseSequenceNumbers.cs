@@ -1,87 +1,48 @@
-﻿namespace CpfValidation
+﻿using System;
+
+namespace CpfValidation
 {
     class CheckCpfFalseSequenceNumbers
     {
+        public static class Constants
+        {
+            public const string ZERO = "00000000000";
+            public const string ONE = "11111111111";
+            public const string TWO = "22222222222";
+            public const string THREE = "33333333333";
+            public const string FOUR = "44444444444";
+            public const string FIVE = "55555555555";
+            public const string SIX = "66666666666";
+            public const string SEVEN = "77777777777";
+            public const string EIGHT = "88888888888";
+            public const string NINE = "99999999999";
+        }
         public static bool CheckFalseNumberSequences(string _cpf)
         {
-            string[] FalseCpf = new string[10] {
-                            "00000000000",
-                                "11111111111",
-                                    "22222222222",
-                                        "33333333333",
-                                            "44444444444",
-                                                "55555555555",
-                                                    "66666666666",
-                                                        "77777777777",
-                                                            "88888888888",
-                                                                "99999999999" };
-            if (_cpf.Equals(FalseCpf.GetValue(0)))
+            switch (_cpf)
             {
-                return true;
-            }
-            else
-            {
-                if (_cpf.Equals(FalseCpf.GetValue(1)))
-                {
+                case Constants.ZERO:
                     return true;
-                }
-                else
-                {
-                    if (_cpf.Equals(FalseCpf.GetValue(2)))
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        if (_cpf.Equals(FalseCpf.GetValue(3)))
-                        {
-
-                        }
-                        else
-                        {
-                            if (_cpf.Equals(FalseCpf.GetValue(4)))
-                            {
-                                return true;
-                            }
-                            else
-                            {
-                                if (_cpf.Equals(FalseCpf.GetValue(5)))
-                                {
-                                    return true;
-                                }
-                                else
-                                {
-                                    if (_cpf.Equals(FalseCpf.GetValue(6)))
-                                    {
-                                        return true;
-                                    }
-                                    else
-                                    {
-                                        if (_cpf.Equals(FalseCpf.GetValue(7)))
-                                        {
-                                            return true;
-                                        }
-                                        else
-                                        {
-                                            if (_cpf.Equals(FalseCpf.GetValue(8)))
-                                            {
-                                                return true;
-                                            }
-                                            else
-                                            {
-                                                if (_cpf.Equals(FalseCpf.GetValue(9)))
-                                                {
-                                                    return true;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                return false;
+                case Constants.ONE:
+                    return true;
+                case Constants.TWO:
+                    return true;
+                case Constants.THREE:
+                    return true;
+                case Constants.FOUR:
+                    return true;
+                case Constants.FIVE:
+                    return true;
+                case Constants.SIX:
+                    return true;
+                case Constants.SEVEN:
+                    return true;
+                case Constants.EIGHT:
+                    return true;
+                case Constants.NINE:
+                    return true;
+                default:
+                    return false;
             }
         }
     }
