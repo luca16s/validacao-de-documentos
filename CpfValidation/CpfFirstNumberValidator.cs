@@ -1,4 +1,5 @@
 ﻿using System;
+using static CpfValidation.Constants;
 
 namespace CpfValidation
 {
@@ -7,15 +8,15 @@ namespace CpfValidation
         public static bool CheckFirstValid(string _cpf)
         {
             //string[] numerosDivididos = Regex.Split(_cpf.Replace("-", "").Replace(".", ""), "");
-            double cpfValidationCalc = ((Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, 1)) * 10)
-                + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, 2)) * 9)
-                    + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, 3)) * 8)
-                        + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, 4)) * 7)
-                            + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, 5)) * 6)
-                                + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, 6)) * 5)
-                                    + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, 7)) * 4)
-                                        + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, 8)) * 3)
-                                            + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, 9)) * 2));
+            double cpfValidationCalc = ((Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.First)) * ValueToCalc.Ten)
+                + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.Second)) * ValueToCalc.Nine)
+                    + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.Third)) * ValueToCalc.Eight)
+                        + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.Fourth)) * ValueToCalc.Seven)
+                            + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.Fifth)) * ValueToCalc.Six)
+                                + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.Sixth)) * ValueToCalc.Five)
+                                    + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.Seventh)) * ValueToCalc.Four)
+                                        + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.Eighth)) * ValueToCalc.Three)
+                                            + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.Ninth)) * ValueToCalc.Two));
             double cpfValidationResult = (cpfValidationCalc * 10) % 11;
             if (cpfValidationResult == Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, 10)))
             {
