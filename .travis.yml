@@ -5,6 +5,7 @@ mono: none
 dotnet: 1.0.1
 before_install:
   - chmod +x build.sh
+  - chmod +x test.sh
 script:
   - sudo ./build.sh --quiet verify
   - sudo ./test.sh --quiet verify
