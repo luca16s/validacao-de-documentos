@@ -3,21 +3,24 @@ using CpfValidation;
 
 namespace CpfTest
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            string UserCpf;
             Console.WriteLine("Insira seu CPF: ");
-            UserCpf = Console.ReadLine();
-            if (CpfValidationClass.Validation(UserCpf.Replace("-", "").Replace(".", "")) == false)
+            var userCpf = Console.ReadLine();
+            var validationResults = CpfValidationClass.Validation(userCpf.Replace("-", "").Replace(".", ""))
+                                    && CpfValidationClass.CheckFalseSequences(userCpf.Replace("-", "").Replace(".", ""))
+                                    && CpfValidationClass.CheckLength(userCpf.Replace("-", "").Replace(".", ""))
+                                    && CpfValidationClass.CheckLetters(userCpf.Replace("-", "").Replace(".", ""));
+            if (validationResults)
             {
-                Console.WriteLine("CPF Invalido!");
+                Console.WriteLine("CPF Valido!");
+                Console.WriteLine(CpfRegionCheck.RegionCpf(userCpf.Replace("-", "").Replace(".", "")));
             }
             else
             {
-                Console.WriteLine("CPF Valido!");
-                Console.WriteLine(CpfRegionCheck.RegionCpf(UserCpf.Replace("-", "").Replace(".", "")));
+                Console.WriteLine("CPF Invalido!");
             }
             Console.ReadLine();
         }

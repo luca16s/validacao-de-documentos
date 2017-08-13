@@ -1,5 +1,4 @@
-﻿using System;
-using static CpfValidation.Constants;
+﻿using static CpfValidation.Constants;
 
 namespace CpfValidation
 {
@@ -9,25 +8,25 @@ namespace CpfValidation
         {
             switch (_cpf)
             {
-                case CpfFalseSequenceNumbers.ZERO:
+                case CpfFalseSequenceNumbers.Zero:
                     return true;
-                case CpfFalseSequenceNumbers.ONE:
+                case CpfFalseSequenceNumbers.One:
                     return true;
-                case CpfFalseSequenceNumbers.TWO:
+                case CpfFalseSequenceNumbers.Two:
                     return true;
-                case CpfFalseSequenceNumbers.THREE:
+                case CpfFalseSequenceNumbers.Three:
                     return true;
-                case CpfFalseSequenceNumbers.FOUR:
+                case CpfFalseSequenceNumbers.Four:
                     return true;
-                case CpfFalseSequenceNumbers.FIVE:
+                case CpfFalseSequenceNumbers.Five:
                     return true;
-                case CpfFalseSequenceNumbers.SIX:
+                case CpfFalseSequenceNumbers.Six:
                     return true;
-                case CpfFalseSequenceNumbers.SEVEN:
+                case CpfFalseSequenceNumbers.Seven:
                     return true;
-                case CpfFalseSequenceNumbers.EIGHT:
+                case CpfFalseSequenceNumbers.Eight:
                     return true;
-                case CpfFalseSequenceNumbers.NINE:
+                case CpfFalseSequenceNumbers.Nine:
                     return true;
                 default:
                     return false;

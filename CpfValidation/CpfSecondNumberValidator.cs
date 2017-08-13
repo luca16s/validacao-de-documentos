@@ -8,8 +8,8 @@ namespace CpfValidation
         public static bool CheckSecondValid(string _cpf)
         {
             //string[] numerosDivididos = Regex.Split(_cpf.Replace("-", "").Replace(".", ""), "");
-            double cpfValidationCalc = ((Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.First)) * ValueToCalc.Eleven)
-                + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.Second)) * ValueToCalc.Ten)
+            double cpfValidationCalc = ((Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.Second)) * ValueToCalc.Ten)
+                + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.First)) * ValueToCalc.Eleven)
                     + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.Third)) * ValueToCalc.Nine)
                         + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.Fourth)) * ValueToCalc.Eight)
                             + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.Fifth)) * ValueToCalc.Seven)
@@ -19,6 +19,7 @@ namespace CpfValidation
                                             + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.Ninth)) * ValueToCalc.Three)
                                                 + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.Tenth)) * ValueToCalc.Two));
             double cpfValidationResult = (cpfValidationCalc * 10) % 11;
+            double TOLERANCE = 0.0;
             if (cpfValidationResult == Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, 11)) || cpfValidationResult == 10)
             {
                 return true;

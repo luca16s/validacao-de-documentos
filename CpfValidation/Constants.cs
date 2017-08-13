@@ -1,23 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CpfValidation
+﻿namespace CpfValidation
 {
     class Constants
     {
         public static class CpfDigit
         {
-            public const int First = 1;
-            public const int Second = 2;
-            public const int Third = 3;
-            public const int Fourth = 4;
-            public const int Fifth = 5;
-            public const int Sixth = 6;
-            public const int Seventh = 7;
-            public const int Eighth = 8;
-            public const int Ninth = 9;
-            public const int Tenth = 10;
+            public static int First { get; } = 1;
+            public static int Second { get; } = 2;
+            public static int Third { get; } = 3;
+            public static int Fourth { get; } = 4;
+            public static int Fifth { get; } = 5;
+            public static int Sixth { get; } = 6;
+            public static int Seventh { get; } = 7;
+            public static int Eighth { get; } = 8;
+            public static int Ninth { get; } = 9;
+            public static int Tenth { get; } = 10;
         }
 
         public static class ValueToCalc
@@ -36,16 +32,16 @@ namespace CpfValidation
 
         public static class CpfFalseSequenceNumbers
         {
-            public const string ZERO = "00000000000";
-            public const string ONE = "11111111111";
-            public const string TWO = "22222222222";
-            public const string THREE = "33333333333";
-            public const string FOUR = "44444444444";
-            public const string FIVE = "55555555555";
-            public const string SIX = "66666666666";
-            public const string SEVEN = "77777777777";
-            public const string EIGHT = "88888888888";
-            public const string NINE = "99999999999";
+            public const string Zero = "00000000000";
+            public const string One = "11111111111";
+            public const string Two = "22222222222";
+            public const string Three = "33333333333";
+            public const string Four = "44444444444";
+            public const string Five = "55555555555";
+            public const string Six = "66666666666";
+            public const string Seven = "77777777777";
+            public const string Eight = "88888888888";
+            public const string Nine = "99999999999";
         }
     }
 }

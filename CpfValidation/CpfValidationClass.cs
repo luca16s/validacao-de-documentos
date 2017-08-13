@@ -1,29 +1,38 @@
 ﻿using System;
-using System.Text.RegularExpressions;
+using System.Security.Cryptography.X509Certificates;
+using static System.Text.RegularExpressions.Regex;
 
 namespace CpfValidation
 {
-    public static class CpfValidationClass
+    public class CpfValidationClass
     {
-        public static bool Validation(string _cpf)
+        public static bool CheckLength(string cpf)
         {
-            bool checkCpfLength = _cpf.Length < 11 || _cpf.Length > 11;
+            var checkCpfLength = cpf.Length < 11 || cpf.Length > 11;
             if (checkCpfLength)
-                throw new ArgumentException("O CPF deve conter 11 dígitos!");
-
-            bool checkCpfcharacters = Regex.IsMatch(_cpf, @"^\d+$") == false;
-            if(checkCpfcharacters)
-                throw new ArgumentException("O CPF só deve conter números!");
-
-            bool checkFalseSequences = CheckCpfFalseSequenceNumbers.CheckFalseNumberSequences(_cpf).Equals(false);
-            if (checkFalseSequences)
-            {
-                bool checkValidatorNumbers = CpfFirstNumberValidator.CheckFirstValid(_cpf).Equals(true) && CpfSecondNumberValidator.CheckSecondValid(_cpf).Equals(true);
-                if (checkValidatorNumbers)
-                    return true;
                 return false;
-            }
-            return false;
+            return true;
+        }
+
+        public static bool CheckLetters(string cpf)
+        {
+            var checkCpfcharacters = IsMatch(cpf, @"^\d+$") == false;
+            if (checkCpfcharacters)
+                return false;
+            return true;
+        }
+
+        public static bool CheckFalseSequences(string cpf)
+        {
+            var checkFalseSequences = CheckCpfFalseSequenceNumbers.CheckFalseNumberSequences(cpf).Equals(false);
+            if (!checkFalseSequences) return false;
+            return true;
+        }
+
+        public static bool Validation(string cpf)
+        {
+            var checkValidatorNumbers = CpfFirstNumberValidator.CheckFirstValid(cpf).Equals(true) && CpfSecondNumberValidator.CheckSecondValid(cpf).Equals(true);
+            return checkValidatorNumbers;
         }
     }
 }
