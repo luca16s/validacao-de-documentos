@@ -7,7 +7,6 @@ namespace CpfValidation
     {
         public static bool CheckFirstValid(string _cpf)
         {
-            //string[] numerosDivididos = Regex.Split(_cpf.Replace("-", "").Replace(".", ""), "");
             double cpfValidationCalc = ((Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.First)) * ValueToCalc.Ten)
                 + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.Second)) * ValueToCalc.Nine)
                     + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(_cpf, CpfDigit.Third)) * ValueToCalc.Eight)
