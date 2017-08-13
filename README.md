@@ -25,7 +25,7 @@ Pode também retornar a região que o CPF foi cadastrado.
 Adicione a referência ao seu projeto e chame a função Validation() que está dentro da classe CpfValidationClass.cs;
 Ela irá retornar verdadeiro se a numeração do CPF estiver correta. Se estiver errada ira retornar falso.
 
-#### Exemple
+#### Example
 
 ```csharp
 using System;
