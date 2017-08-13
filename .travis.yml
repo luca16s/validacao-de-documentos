@@ -7,3 +7,4 @@ before_install:
   - chmod +x build.sh
 script:
   - sudo ./build.sh --quiet verify
+  - sudo ./test.sh --quiet verify
