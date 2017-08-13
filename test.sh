@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-dotnet test
+dotnet restore && dotnet test
