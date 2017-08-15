@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CpfValidation", "CpfValidation\CpfValidation.csproj", "{E872A716-3801-49F2-AD03-A1FCD74A4690}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CpfUnitTests", "CpfUnitTests\CpfUnitTests.csproj", "{7AA4B867-0F0B-4EF3-8A96-8B49CBD6AFE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CpfUnitTests", "CpfUnitTests\CpfUnitTests.csproj", "{7AA4B867-0F0B-4EF3-8A96-8B49CBD6AFE4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CpfTest", "CpfTest\CpfTest.csproj", "{51D361D1-4B0B-4364-AD26-8C8212EA216B}"
 EndProject
@@ -30,6 +30,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7CBCCF20-D7AF-4CC0-B50E-3CA51E136714}
 	EndGlobalSection
 	GlobalSection(Performance) = preSolution
 		HasPerformanceSessions = true
