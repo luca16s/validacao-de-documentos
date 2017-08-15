@@ -8,11 +8,11 @@ namespace CpfTest
         private static void Main(string[] args)
         {
             Console.WriteLine("Insira seu CPF: ");
-            var userCpf = Console.ReadLine();
-            var validationResults = CpfValidationClass.Validation(userCpf.Replace("-", "").Replace(".", ""))
-                                    && CpfValidationClass.CheckFalseSequences(userCpf.Replace("-", "").Replace(".", ""))
-                                    && CpfValidationClass.CheckLength(userCpf.Replace("-", "").Replace(".", ""))
-                                    && CpfValidationClass.CheckLetters(userCpf.Replace("-", "").Replace(".", ""));
+            var userCpf = Console.ReadLine().Replace("-", "").Replace(".", "");
+            var validationResults = CpfValidationClass.Validation(userCpf)
+                                    && CpfValidationClass.CheckFalseSequences(userCpf)
+                                    && CpfValidationClass.CheckLength(userCpf)
+                                    && CpfValidationClass.CheckLetters(userCpf);
             if (validationResults)
             {
                 Console.WriteLine("CPF Valido!");

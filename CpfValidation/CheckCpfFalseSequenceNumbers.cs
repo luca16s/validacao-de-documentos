@@ -2,11 +2,11 @@
 
 namespace CpfValidation
 {
-    class CheckCpfFalseSequenceNumbers
+    static class CheckCpfFalseSequenceNumbers
     {
-        public static bool CheckFalseNumberSequences(string _cpf)
+        public static bool CheckFalseNumberSequences(string cpf)
         {
-            switch (_cpf)
+            switch (cpf)
             {
                 case CpfFalseSequenceNumbers.Zero:
                     return true;

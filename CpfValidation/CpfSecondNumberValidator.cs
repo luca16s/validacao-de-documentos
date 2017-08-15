@@ -3,7 +3,7 @@ using static CpfValidation.Constants;
 
 namespace CpfValidation
 {
-    class CpfSecondNumberValidator
+    internal static class CpfSecondNumberValidator
     {
         public static bool CheckSecondValid(string _cpf)
         {

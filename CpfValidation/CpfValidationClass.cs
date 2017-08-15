@@ -25,8 +25,8 @@ namespace CpfValidation
         public static bool CheckFalseSequences(string cpf)
         {
             var checkFalseSequences = CheckCpfFalseSequenceNumbers.CheckFalseNumberSequences(cpf).Equals(false);
-            if (!checkFalseSequences) return false;
-            return true;
+            if (checkFalseSequences) return true;
+            return false;
         }
 
         public static bool Validation(string cpf)

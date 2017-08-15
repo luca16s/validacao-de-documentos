@@ -5,21 +5,23 @@ namespace CpfValidation
 {
     public static class CpfRegionCheck
     {
-        public static string RegionCpf(string _cpf)
+        public static string RegionCpf(string cpf)
         {
-            List<string> Region = new List<string>();
-            Region.Add("Rio Grande do Sul");
-            Region.Add("Distrito Federal, Goiás, Mato Grosso do Sul e Tocantins");
-            Region.Add("Pará, Amazonas, Acre, Amapá, Rondônia e Roraima");
-            Region.Add("Ceará, Maranhão e Piauí");
-            Region.Add("Pernambuco, Rio Grande do Norte, Paraíba e Alagoas");
-            Region.Add("Bahia e Sergipe");
-            Region.Add("Minas Gerais");
-            Region.Add("Rio de Janeiro e Espírito Santo");
-            Region.Add("São Paulo");
-            Region.Add("Paraná e Santa Catarina");
+            var region = new List<string>
+            {
+                "Rio Grande do Sul",
+                "Distrito Federal, Goiás, Mato Grosso do Sul e Tocantins",
+                "Pará, Amazonas, Acre, Amapá, Rondônia e Roraima",
+                "Ceará, Maranhão e Piauí",
+                "Pernambuco, Rio Grande do Norte, Paraíba e Alagoas",
+                "Bahia e Sergipe",
+                "Minas Gerais",
+                "Rio de Janeiro e Espírito Santo",
+                "São Paulo",
+                "Paraná e Santa Catarina"
+            };
 
-            return Region[Convert.ToInt32(SplitCpfNumbers.SplitNumbers(_cpf, 9))];
+            return region[Convert.ToInt32(SplitCpfNumbers.SplitNumbers(cpf, 9))];
         }
     }
 }
