@@ -9,7 +9,7 @@ Bulid Status|License|
 :us:
 ### About this project
 Library to validate Brazilian CPF numbers.
-As well this libs can return the region where CPF is created.
+As well this lib can return the region where CPF is created.
 
 ### How to use
 Simplely add reference to your project and call the function Validation() who is inside the class "CpfValidationClass.cs";
