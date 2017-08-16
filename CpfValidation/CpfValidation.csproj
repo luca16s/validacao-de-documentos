@@ -8,11 +8,12 @@
     <Description>Library to Validate CPF numbers.</Description>
     <RepositoryUrl>https://github.com/luca16s/Validacao-de-CPF.git</RepositoryUrl>
     <PackageProjectUrl></PackageProjectUrl>
-    <FileVersion>1.0.1.5</FileVersion>
+    <FileVersion>1.0.1.6</FileVersion>
     <PackageLicenseUrl>https://github.com/luca16s/Validacao-de-CPF/blob/master/LICENSE.MD</PackageLicenseUrl>
-    <AssemblyVersion>1.0.1.5</AssemblyVersion>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
     <Copyright>Gian Luca da Silva Figueiredo</Copyright>
-    <Version>1.0.4</Version>
+    <Version>1.0.0</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
