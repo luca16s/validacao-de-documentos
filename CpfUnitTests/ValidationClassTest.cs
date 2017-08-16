@@ -67,16 +67,16 @@ namespace CpfUnitTests
         {
             var regionNames = new List<string>
             {
-                "Rio Grande do Sul",
-                "Distrito Federal, Goiás, Mato Grosso do Sul e Tocantins",
-                "Pará, Amazonas, Acre, Amapá, Rondônia e Roraima",
-                "Ceará, Maranhão e Piauí",
-                "Pernambuco, Rio Grande do Norte, Paraíba e Alagoas",
-                "Bahia e Sergipe",
-                "Minas Gerais",
-                "Rio de Janeiro e Espírito Santo",
-                "São Paulo",
-                "Paraná e Santa Catarina"
+                "RS",
+                "DF, GO, MS e TO",
+                "PA, AM, AC, AM, RO e RR",
+                "CE, MA e PI",
+                "PE, RN, PB e AL",
+                "BA e SE",
+                "MG",
+                "RJ e ES",
+                "SP",
+                "PR e SC"
             };
 
             string[] region =
