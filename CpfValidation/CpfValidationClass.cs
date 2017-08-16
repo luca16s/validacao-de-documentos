@@ -1,10 +1,8 @@
-﻿using System;
-using System.Security.Cryptography.X509Certificates;
-using static System.Text.RegularExpressions.Regex;
+﻿using static System.Text.RegularExpressions.Regex;
 
 namespace CpfValidation
 {
-    public class CpfValidationClass
+    public static class CpfValidationClass
     {
         public static bool CheckLength(string cpf)
         {

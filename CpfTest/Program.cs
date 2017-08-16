@@ -5,7 +5,7 @@ namespace CpfTest
 {
     static class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             Console.WriteLine("Insira seu CPF: ");
             var userCpf = Console.ReadLine().Replace("-", "").Replace(".", "");

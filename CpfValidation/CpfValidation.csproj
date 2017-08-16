@@ -12,6 +12,7 @@
     <PackageLicenseUrl>https://github.com/luca16s/Validacao-de-CPF/blob/master/LICENSE.MD</PackageLicenseUrl>
     <AssemblyVersion>1.0.1.5</AssemblyVersion>
     <Copyright>Gian Luca da Silva Figueiredo</Copyright>
+    <Version>1.0.4</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -1,6 +1,6 @@
 ﻿namespace CpfValidation
 {
-    class Constants
+    static class Constants
     {
         public static class CpfDigit
         {

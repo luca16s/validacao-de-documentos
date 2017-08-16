@@ -2,11 +2,11 @@
 
 namespace CpfValidation
 {
-    class SplitCpfNumbers
+    static class SplitCpfNumbers
     {
-        public static string SplitNumbers(string _cpf, int controllNumber)
+        public static string SplitNumbers(string cpf, int controllNumber)
         {
-            string[] dividedNumber = Regex.Split(_cpf.Replace("-", "").Replace(".", ""), "");
+            string[] dividedNumber = Regex.Split(cpf.Replace("-", "").Replace(".", ""), "");
             return dividedNumber[controllNumber];
         }
     }
