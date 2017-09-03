@@ -6,7 +6,9 @@ namespace CpfValidation
     {
         public static bool CheckLength(string cpf)
         {
-            var checkCpfLength = cpf.Length < 11 || cpf.Length > 11;
+            bool checkCpfLength;
+            checkCpfLength = cpf.Length < 11 || cpf.Length > 11;
+
             if (checkCpfLength)
                 return false;
             return true;
@@ -14,7 +16,9 @@ namespace CpfValidation
 
         public static bool CheckLetters(string cpf)
         {
-            var checkCpfcharacters = IsMatch(cpf, @"^\d+$") == false;
+            bool checkCpfcharacters;
+            checkCpfcharacters = IsMatch(cpf, @"^\d+$") == false;
+
             if (checkCpfcharacters)
                 return false;
             return true;
@@ -22,14 +26,20 @@ namespace CpfValidation
 
         public static bool CheckFalseSequences(string cpf)
         {
-            var checkFalseSequences = CheckCpfFalseSequenceNumbers.CheckFalseNumberSequences(cpf).Equals(false);
-            if (checkFalseSequences) return true;
+            bool checkFalseSequences;
+            checkFalseSequences = CheckCpfFalseSequenceNumbers.CheckFalseNumberSequences(cpf).Equals(false);
+
+            if (checkFalseSequences)
+                return true;
             return false;
         }
 
         public static bool Validation(string cpf)
         {
-            var checkValidatorNumbers = CpfFirstNumberValidator.CheckFirstValid(cpf).Equals(true) && CpfSecondNumberValidator.CheckSecondValid(cpf).Equals(true);
+            bool checkValidatorNumbers;
+            checkValidatorNumbers = CpfFirstNumberValidator.CheckFirstValid(cpf).Equals(true) &&
+                                    CpfSecondNumberValidator.CheckSecondValid(cpf).Equals(true);
+
             return checkValidatorNumbers;
         }
     }

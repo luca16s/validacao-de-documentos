@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Globalization;
 using static CpfValidation.Constants;
+using static CpfValidation.Constants.ValueToCalc;
 
 namespace CpfValidation
 {
@@ -7,19 +9,23 @@ namespace CpfValidation
     {
         public static bool CheckSecondValid(string cpf)
         {
-            
-            double cpfValidationCalc = ((Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Second)) * ValueToCalc.Ten)
-                + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.First)) * ValueToCalc.Eleven)
-                    + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Third)) * ValueToCalc.Nine)
-                        + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Fourth)) * ValueToCalc.Eight)
-                            + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Fifth)) * ValueToCalc.Seven)
-                                + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Sixth)) * ValueToCalc.Six)
-                                    + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Seventh)) * ValueToCalc.Five)
-                                        + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Eighth)) * ValueToCalc.Four)
-                                            + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Ninth)) * ValueToCalc.Three)
-                                                + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Tenth)) * ValueToCalc.Two));
-            double cpfValidationResult = (cpfValidationCalc * 10) % 11;
-            if (cpfValidationResult == Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, 11)) || cpfValidationResult == 10)
+            double cpfValidationCalc;
+            cpfValidationCalc = ((Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Second)) * Ten)
+                                 + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.First)) * Eleven)
+                                 + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Third)) * Nine)
+                                 + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Fourth)) * Eight)
+                                 + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Fifth)) * Seven)
+                                 + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Sixth)) * Six)
+                                 + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Seventh)) * Five)
+                                 + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Eighth)) * Four)
+                                 + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Ninth)) * Three)
+                                 + (Convert.ToDouble(SplitCpfNumbers.SplitNumbers(cpf, CpfDigit.Tenth)) * Two));
+
+            double cpfValidationResult;
+            cpfValidationResult = (cpfValidationCalc * 10) % 11;
+
+            if (cpfValidationResult.ToString(CultureInfo.InvariantCulture) == SplitCpfNumbers.SplitNumbers(cpf, 11) 
+                || cpfValidationResult.ToString(CultureInfo.InvariantCulture) == "10")
             {
                 return true;
             }

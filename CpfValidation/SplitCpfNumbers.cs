@@ -1,12 +1,13 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 
 namespace CpfValidation
 {
-    static class SplitCpfNumbers
+    internal static class SplitCpfNumbers
     {
         public static string SplitNumbers(string cpf, int controllNumber)
         {
-            string[] dividedNumber = Regex.Split(cpf.Replace("-", "").Replace(".", ""), "");
+            var dividedNumber = Regex.Split(cpf.Replace("-", "").Replace(".", ""), "") ?? throw new ArgumentNullException(nameof(cpf));
             return dividedNumber[controllNumber];
         }
     }

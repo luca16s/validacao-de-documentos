@@ -1,5 +1,6 @@
 ﻿using System;
 using CpfValidation;
+using static CpfValidation.CpfValidationClass;
 
 namespace CpfTest
 {
@@ -9,10 +10,10 @@ namespace CpfTest
         {
             Console.WriteLine("Insira seu CPF: ");
             var userCpf = Console.ReadLine().Replace("-", "").Replace(".", "");
-            var validationResults = CpfValidationClass.Validation(userCpf)
-                                    && CpfValidationClass.CheckFalseSequences(userCpf)
-                                    && CpfValidationClass.CheckLength(userCpf)
-                                    && CpfValidationClass.CheckLetters(userCpf);
+            var validationResults = CheckLength(userCpf)
+                                    && CheckFalseSequences(userCpf)
+                                    && CheckLetters(userCpf)
+                                    && Validation(userCpf);
             if (validationResults)
             {
                 Console.WriteLine("CPF Valido!");

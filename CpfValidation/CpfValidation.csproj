@@ -3,17 +3,19 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <Authors>Gian Luca da Silva Figueiredo</Authors>
-    <Company />
-    <Product />
-    <Description>Library to Validate CPF numbers.</Description>
-    <RepositoryUrl>https://github.com/luca16s/Validacao-de-CPF.git</RepositoryUrl>
-    <PackageProjectUrl></PackageProjectUrl>
-    <FileVersion>1.0.1.6</FileVersion>
-    <PackageLicenseUrl>https://github.com/luca16s/Validacao-de-CPF/blob/master/LICENSE.MD</PackageLicenseUrl>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <Company>Gian Luca da Silva Figueiredo</Company>
+    <Product>Document Validation</Product>
+    <Description>Library to validate documente numbers.</Description>
+    <RepositoryUrl>https://github.com/luca16s/validacao-de-documentos.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/luca16s/validacao-de-documentos</PackageProjectUrl>
+    <FileVersion>1.0.1.7</FileVersion>
+    <PackageLicenseUrl>https://github.com/luca16s/validacao-de-documentos/blob/master/LICENSE.MD</PackageLicenseUrl>
+    <AssemblyVersion>1.0.2.2</AssemblyVersion>
     <Copyright>Gian Luca da Silva Figueiredo</Copyright>
     <Version>1.0.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageTags />
+    <PackageId>DocValidation</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
