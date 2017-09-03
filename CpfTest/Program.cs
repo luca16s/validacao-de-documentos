@@ -17,7 +17,7 @@ namespace CpfTest
             if (validationResults)
             {
                 Console.WriteLine("CPF Valido!");
-                Console.WriteLine(CpfRegionCheck.RegionCpf(userCpf.Replace("-", "").Replace(".", "")));
+                Console.WriteLine(CpfRegionCheck.RegionCpf(userCpf));
             }
             else
             {
