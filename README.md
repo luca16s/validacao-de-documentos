@@ -41,8 +41,8 @@ namespace CpfTest
             Console.WriteLine("Insira seu CPF: ");
             var userCpf = Console.ReadLine().Replace("-", "").Replace(".", "");
             var validationResults = CheckLength(userCpf)
-                                    && CheckFalseSequences(userCpf)
                                     && CheckLetters(userCpf)
+                                    && CheckFalseSequences(userCpf)
                                     && Validation(userCpf);
             if (validationResults)
             {
