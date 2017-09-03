@@ -34,24 +34,24 @@ using CpfValidation;
 
 namespace CpfTest
 {
-    static class Program
+    internal static class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
-            Console.WriteLine("Insira seu CPF|Insert your CPF: ");
-            var userCpf = Console.ReadLine();
-            var validationResults = CpfValidationClass.Validation(userCpf.Replace("-", "").Replace(".", ""))
-                                    && CpfValidationClass.CheckFalseSequences(userCpf.Replace("-", "").Replace(".", ""))
-                                    && CpfValidationClass.CheckLength(userCpf.Replace("-", "").Replace(".", ""))
-                                    && CpfValidationClass.CheckLetters(userCpf.Replace("-", "").Replace(".", ""));
+            Console.WriteLine("Insira seu CPF: ");
+            var userCpf = Console.ReadLine().Replace("-", "").Replace(".", "");
+            var validationResults = CheckLength(userCpf)
+                                    && CheckFalseSequences(userCpf)
+                                    && CheckLetters(userCpf)
+                                    && Validation(userCpf);
             if (validationResults)
             {
-                Console.WriteLine("CPF Valido|Valid!");
-                Console.WriteLine(CpfRegionCheck.RegionCpf(userCpf.Replace("-", "").Replace(".", "")));
+                Console.WriteLine("CPF Valido!");
+                Console.WriteLine(CpfRegionCheck.RegionCpf(userCpf));
             }
             else
             {
-                Console.WriteLine("CPF Invalido|Invalid!");
+                Console.WriteLine("CPF Invalido!");
             }
             Console.ReadLine();
         }
