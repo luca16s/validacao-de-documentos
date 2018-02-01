@@ -4,7 +4,7 @@ Validação de documentos
 ## Project status
 Bulid Status|License|
 ------------|-------|
-[![Build Status](https://travis-ci.org/luca16s/Validacao-de-CPF.svg?branch=master)](https://travis-ci.org/luca16s/Validacao-de-CPF) | [![License](https://img.shields.io/badge/LICENSE-MIT-orange.svg)]() |
+[![Build Status](https://travis-ci.org/luca16s/validacao-de-documentos.svg?branch=master)](https://travis-ci.org/luca16s/validacao-de-documentos) | [![License](https://img.shields.io/badge/LICENSE-MIT-orange.svg)]() |
 
 :us:
 ### About this project
